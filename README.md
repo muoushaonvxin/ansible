@@ -1,6 +1,8 @@
 
 ## Ansible相互互信
 
+<br>
+
 编辑用户自定义管理配置文件
 ```shell
 [root@zhangyz ~]# vim /etc/ansible/hosts                          
