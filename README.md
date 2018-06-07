@@ -13,9 +13,9 @@
 ```
 
 指定组名字然后对其进行测试
-
-ansible nginx -m ping
-
+```shell
+[root@zhangyz ~]# ansible nginx -m ping
+```
 
 在平常的情况下，ansible 都使用 root 的权限来进行管理
 
