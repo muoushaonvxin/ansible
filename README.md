@@ -9,12 +9,21 @@
 192.168.5.200
 
 [nginx]
-192.168.1.1
+10.203.206.235
+10.203.206.236
 ```
 
 指定组名字然后对其进行测试
 ```shell
 [root@zhangyz ~]# ansible nginx -m ping
+10.203.206.235 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+10.203.206.236 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
 ```
 
 在平常的情况下，ansible 都使用 root 的权限来进行管理
