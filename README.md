@@ -3,7 +3,7 @@
 
 编辑用户自定义管理配置文件
 ```shell
-vim  /etc/ansible/hosts                          
+[root@zhangyz ~]# vim /etc/ansible/hosts                          
 [test]
 192.168.5.201
 192.168.5.200
