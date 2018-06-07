@@ -28,10 +28,9 @@
 }
 ```
 
-在平常的情况下，ansible 都使用 root 的权限来进行管理
-
+在平常的情况下ansible使用root的权限来进行管理
+```shell
 [webservers]
-
 site01  ansible_ssh_user=root
 site02  ansible_ssh_user=daniel
 site01-dir  ansible_ssh_host=site01.dir ansible_ssh_port=65422
@@ -41,7 +40,6 @@ site01
 site02
 db01  ansible_ssh_user=fred
 ansible_ssh_private_key_file=/home/fred/ssh/id_rsa  bastion
-
 
 [mfs:children]
 mfs_master
@@ -57,34 +55,27 @@ mfs_client
 172.16.5.200
 [mfs_client]
 172.16.2.190
-
+```
 
 
 对于单个主机进行操作
 
-ansible   mfs_master  -m  ping
+ansible mfs_master -m  ping
 
-ansible  mfs_node  -m ping
-
-------------------------------------------------------------------------------------------------------------------------------------------------
+ansible mfs_node -m ping
 
 
 
-
-
-
-先相互配置好密钥认证:
+## 先相互配置好密钥认证ansible的好处
+1) 轻量级
+2) 不用安装客户端以ssh互信的方式工作
  
-ansible 的好处
- 
-1.轻量级
-2.不用安装客户端，以ssh互信的方式工作
- 
- 
- 
-ansible的一些常用内置模块的操作：
- 
--m modele_name   表示所使用的模块名称。
+ansible的一些常用内置模块的操作
+
+--------------------------------------------
+| 命令参数 | 命令参数表示的作用                |
+--------------------------------------------
+-m modele_name 表示所使用的模块名称。
  
 -a argument      跟在模块之后进行调用，使用命令参数来进行配置。
  
